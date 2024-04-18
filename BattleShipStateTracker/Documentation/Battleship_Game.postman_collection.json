@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "74253f2f-172e-4d29-b8bf-5f86090bd725",
+		"name": "Battleship_Game",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34279808"
+	},
+	"item": [
+		{
+			"name": "https://jayantkbattleshipcodingtest.azurewebsites.net/api/CreateBoard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://jayantkbattleshipcodingtest.azurewebsites.net/api/CreateBoard",
+					"protocol": "https",
+					"host": [
+						"jayantkbattleshipcodingtest",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"CreateBoard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://jayantkbattleshipcodingtest.azurewebsites.net/api/ShowBoard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jayantkbattleshipcodingtest.azurewebsites.net/api/ShowBoard",
+					"protocol": "https",
+					"host": [
+						"jayantkbattleshipcodingtest",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"ShowBoard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://jayantkbattleshipcodingtest.azurewebsites.net/api/AddShip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"TotalShips\":1\n}"
+				},
+				"url": {
+					"raw": "https://jayantkbattleshipcodingtest.azurewebsites.net/api/AddShip",
+					"protocol": "https",
+					"host": [
+						"jayantkbattleshipcodingtest",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"AddShip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://jayantkbattleshipcodingtest.azurewebsites.net/api/FireShip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"Xcordinate\":4,\n\"Ycordinate\":7\n}"
+				},
+				"url": {
+					"raw": "https://jayantkbattleshipcodingtest.azurewebsites.net/api/FireShip",
+					"protocol": "https",
+					"host": [
+						"jayantkbattleshipcodingtest",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"FireShip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://jayantkbattleshipcodingtest.azurewebsites.net/api/RestartGame",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jayantkbattleshipcodingtest.azurewebsites.net/api/RestartGame",
+					"protocol": "https",
+					"host": [
+						"jayantkbattleshipcodingtest",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"RestartGame"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
