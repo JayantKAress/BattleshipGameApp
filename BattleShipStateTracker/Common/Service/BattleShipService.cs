@@ -41,6 +41,10 @@ namespace BattleShipStateTracker.Common.Service
         {
             StringBuilder sb = new StringBuilder();
 
+            if(board == null)
+            {
+                throw new BattleShipApiException("Please create a board to start the game.");
+            }
             int rows = board.GetLength(0);
             int cols = board.GetLength(1);
 

@@ -27,11 +27,17 @@ namespace BattleShipStateTracker.Functions
         public async Task<HttpResponseMessage> ShowBoard([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "ShowBoard")] ShowBoardQuery showBoardQuery)
         {
             var board = await Ok(showBoardQuery);
-            var response = new HttpResponseMessage(HttpStatusCode.OK)
+            if(board.StatusCode != 200)
+            {
+                return new HttpResponseMessage(HttpStatusCode.InternalServerError)
+                {
+                    Content = new StringContent("Please create a board to start the game.", Encoding.UTF8, "text/plain")
+                };
+            }            
+            return new HttpResponseMessage(HttpStatusCode.OK)
             {
                 Content = new StringContent(board.Value.ToString(), Encoding.UTF8, "text/plain")
             };
-            return response;
         }
 
         [FunctionName("AddShip")]
